@@ -1,0 +1,34 @@
+@import './variables';
+@import 'popup/form-styling';
+@import 'popup/login-reg';
+
+//data-html-type
+
+html[data-html-type="popup"] body {
+        margin:0;
+        padding:0;
+        line-height:1.2;
+}  
+
+.popup-frame .popup-hide {
+    display: none;
+}
+
+.app-outer {
+    
+    &.true {
+        display: none;
+    }
+}
+
+h1, h2, h3 {
+    margin:0;
+}
+
+ul {
+    padding:0;
+}
+
+* {
+    box-sizing: border-box;
+}

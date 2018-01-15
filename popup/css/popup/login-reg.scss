@@ -1,0 +1,145 @@
+.popup-frame {
+	width: 400px;
+	color:$dark-text;
+	overflow-y: scroll;	
+	#app {
+		.app-outer {
+			.header-image {
+				width:100%;
+			}
+			.log-reg-par {
+				float:left;
+				width:100%;
+				position:relative;
+				margin-bottom:20px;
+				z-index:1;
+				text-align: center;
+				.log-reg-par-inner {
+					max-width: 360px;	
+					width:100%;
+					text-align: left;
+					display: inline-block;
+					background-color:white;
+					.login-par, .register-par {
+
+					}
+					.popup-logins {
+						display: inline-block;
+						max-width: 360px;	
+						width:100%;
+						text-align: left;
+						h2 {
+							display: inline-block;
+							margin-top:12px;
+							font-weight: 400;
+							font-size:16px;
+							padding-bottom:5px;
+							border-bottom:3px solid $light-blue;
+						}
+						.form-wrap {
+							padding:20px;
+							padding-top:0px;
+							float: left;
+							width:100%;
+							text-align: left;
+						}
+						.register-par {
+							text-align: center;
+						}
+						.login-par {
+							text-align: center;
+						}		
+						.logout-par {
+							display: none;
+							text-align: center;
+						}					
+					}
+					.toggle-log-reg-box {
+						float:left;
+						width:100%;
+						display: inline-block;
+						max-width: 360px;	
+						text-align: left;		
+						.option {
+							float:left;
+							position: relative;
+							font-size:18px;
+							width:50%;
+							background: #f6f6f6;
+							border-right:1px solid #dedede;
+							border-bottom:1px solid #dedede;
+							border-top:3px solid $grey-border;
+							text-align: center;
+							padding:20px;
+							opacity:0.6;
+							font-size:18px;
+							cursor: pointer;
+							&:nth-child(2) {
+								border-right:none;
+							}
+							&:before {
+								content:"";
+								position: absolute;
+								top:-3px;
+								left:0;
+								height:3px;
+								width:100%;
+							}							
+						}	
+					}
+				}
+			&.login-active {
+					.log-reg-par-inner {		
+						.toggle-log-reg-box {
+							#pop-login-tab {
+								border-top:3px solid $light-blue;
+								border-bottom:1px solid white;
+								opacity:1;
+								background:white;
+								&:before {
+									@include border-blue-gradient;
+								}
+							}							
+						}
+					}
+			}		
+			&.register-active {
+					.log-reg-par-inner {		
+						.toggle-log-reg-box {
+							#pop-login-register {
+								border-top:3px solid $light-blue;
+								border-bottom:1px solid white;
+								opacity:1;
+								background:white;
+								&:before {
+									@include border-blue-gradient;
+								}								
+							}							
+						}						
+					}							
+			}				
+			}
+		
+			&.logged-in {
+				.log-reg-par {
+					.log-reg-par-inner {		
+						.popup-logins {
+							.logout-par {
+								display: block;
+							}								
+							.login-par {
+								display: none;
+							}			
+							.register-par {
+								display: none;
+							}										
+						}			
+						.toggle-log-reg-box {
+							display: none;
+						}
+					}					
+				}				
+			}	
+		}
+	}
+}

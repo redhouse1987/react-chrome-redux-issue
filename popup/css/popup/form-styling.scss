@@ -1,0 +1,51 @@
+.popup-frame {
+	.logout-par {
+		margin-left:40px;
+	}
+	input {
+		height:40px;
+		border-radius: 2px;
+		-webkit-border-radius:2px;
+		float:left;
+		width:100%;
+		padding:5px;
+		margin-top:5px;
+		border:2px solid $grey-border;
+	}
+	label {
+		float:left;
+		margin-top:20px;
+		width:100%;
+		font-size:14px;
+	}
+	button {
+		float:left;
+		margin-top:20px;
+		background-color:$light-blue;
+		border-radius: 3px;
+		-webkit-border-radius:3px;
+		border:none;
+		padding:8px 34px;
+		color:white;
+		font-weight: 400;
+		background-size: 36px;
+		background-position: left center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		border-bottom:3px solid $dark-blue-border;
+		outline:0;
+		@include elementShadow;
+		font-size:18px;
+		@include elementTransition;
+		&:hover {
+			opacity:0.9;
+		}
+		&:active {
+			border-bottom:1px solid $dark-blue-border;
+			border-top:2px solid white;
+		}
+		&.active {
+			background-image: url(/img/icons/Spinner.svg);
+		}
+	}		
+}
